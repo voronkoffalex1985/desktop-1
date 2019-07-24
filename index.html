@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset=UTF-8>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="container">
+         <header class="header">
+            <div class="logo">
+               <a href="#">
+               <img src="img/logo.jpg" alt="logo">
+               </a>
+            </div>
+            <div class="adress">
+               <h4 class="agent">Агентство недвижимости</h4>
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                  <g>
+                     <g>
+                        <path fill="#fbaa34" d="M8.03 12l2.609-4.535 1.083 3.071h-.875v1.352h5.212v-1.352h-.995L11.321.69 8.029 6.752 4.74.689.994 10.536H0v1.352h5.212v-1.352h-.875L5.42 7.465 8.03 12"/>
+                     </g>
+                  </g>
+               </svg>
+               <span class="street">Москва, «Беляево», ул. Миклухо-Маклая, д. 43</span>
+            </div>
+            <div class="phone_mode">
+               <h4 class="phone">+7 (495) 276-03-03</h4>
+               <span class="mode">Пн—Пт: с 09.00 до 21.00, Сб—Вс: с 10.00 до 17.00</span>
+            </div>
+            <div class="buttonBox">
+               <button class="btn">
+               <span class="consul">Бесплатная консультация</span>
+               </button>
+            </div>
+         </header>
+         <div class="header__bottom">
+            <div class="nav__menu">
+               <ul class="menu">
+                  <li><a href="#">новостройки</a></li>
+                  <li><a href="#">элитная недвижимость</a></li>
+                  <li><a href="#">вторичная недвижимость</a></li>
+                  <li><a href="#">коммерческая недвижимость</a></li>
+                  <li><a href="#">ипотека</a></li>
+                  <li><a href="#">услуги</a></li>
+                  <li><a href="#">контакты</a></li>
+               </ul>
+               <div class="search-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                     <g>
+                        <g>
+                           <path fill="#74cfb7" d="M5.964 10.457A4.263 4.263 0 0 1 2.906 9.17c-1.686-1.714-1.686-4.502 0-6.216a4.262 4.262 0 0 1 3.058-1.287c1.156 0 2.242.457 3.059 1.287 1.686 1.714 1.686 4.502 0 6.216a4.263 4.263 0 0 1-3.059 1.287zm7.796 2.12l-2.886-2.932c-.02-.021-.044-.037-.067-.056 1.674-2.368 1.47-5.684-.625-7.814a5.897 5.897 0 0 0-8.435 0c-2.33 2.368-2.33 6.206 0 8.573a5.886 5.886 0 0 0 7.943.445c.009.01.015.02.025.03l2.885 2.932a.809.809 0 0 0 1.16.001.843.843 0 0 0 0-1.179z"/>
+                        </g>
+                     </g>
+                  </svg>
+               </div>
+            </div>
+         </div>
+         <section class="filters filters6 mw filters-bg">
+            <h1 class="caption">Купить квартиру в новостройке</h1>
+            <div class="middle-box">
+               <div class="filters-content">
+                  <form>
+                     <fieldset>
+                        <div class="filters-range one-half">
+                           <div class="title">Стоимость, млн руб.</div>
+                           <span class="irs js-irs-0">
+                           <span class="irs">
+                           <span class="irs-line" tabindex="0">
+                           <span class="irs-line-left"></span>
+                           <span class="irs-line-mid"></span>
+                           <span class="irs-line-right"></span>
+                           </span>
+                           <span class="irs-from" style="visibility: visible; left: -7.21649%;">от 1</span>
+                           <span class="irs-to" style="visibility: visible; left: 92.9124%;">до 69</span>
+                           <span class="irs-single" style="visibility: hidden; left: 39.884%;">0 — 231</span>
+                           </span>
+                           <span class="irs-grid"></span>
+                           <span class="irs-bar" style="left: 0%; width: 100%;"></span>
+                           </span>
+                           <input type="text" id="slider-price" name="slider-price" value="" class="irs-hidden-input" tabindex="-1" readonly="">
+                           <input type="hidden" id="list-price" name="price" value="">
+                        </div>
+                        <div class="filters-checkbox-block">
+                           <input type="checkbox" name="region-list" id="region1" value="1 3">
+                           <label for="region1">Москва и Новая Москва</label><br>
+                           <input type="checkbox" name="region-list" id="region2" value="2">
+                           <label for="region2">Московская область</label>
+                        </div>
+                        <ul class="list-filter">
+                           <li>
+                              <select name="catid" id="list-catid">
+                                 <option value="0">Жилой комплекс</option>
+                              </select>
+                              <div class="sel-options">
+                              </div>
+                           </li>
+                           <li>
+                              <select name="metro" id="list-metro">
+                                 <option value="0">Станция метро</option>
+                              </select>
+                              <div class="sel-options">								
+                              </div>
+                           </li>
+                           <li>
+                              <select name="rooms" id="list-rooms">
+                                 <option value="0">Комнат</option>
+                                 <option value="1" id="rooms1">1 комната</option>
+                                 <option value="2" id="rooms2">2 комнаты</option>
+                                 <option value="3" id="rooms3">3 комнаты</option>
+                                 <option value="4" id="rooms4">4 комнаты</option>
+                                 <option value="5" id="rooms5">более 4х комнат</option>
+                              </select>
+                              <div class="sel-options">
+                              </div>
+                           </li>
+                           <li>
+                              <select name="otdelka" id="list-otdelka">
+                                 <option value="0">Тип отделки</option>
+                              </select>
+                              <div class="sel-options">
+                              </div>
+                           </li>
+                           <li>
+                              <select name="ready" id="list-ready" class="single-choice">
+                                 <option value="0">Срок сдачи</option>
+                                 <option value="1 квартал 2019">1 квартал 2019</option>
+                              </select>
+                              <div class="sel-options">
+                              </div>
+                           </li>
+                           <li class="submit">
+                              <input type="button" class="go-search" value="Найти">
+                           </li>
+                        </ul>
+                        <input type="hidden" value="" id="category">
+                     </fieldset>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <div class="wrapper__map">
+         </div>
+         <section class="area-result">
+            <div class="box">
+               <div class="category">
+                  <div class="complex-text">
+                     <a href="#" class="complex-title">Микрорайон Некрасовка</a>
+                     <div class="complex-metro">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                           <g>
+                              <g>
+                                 <path fill="#b1d431" d="M8.03 12l2.609-4.535 1.083 3.071h-.875v1.352h5.212v-1.352h-.995L11.321.69 8.029 6.752 4.74.689.994 10.536H0v1.352h5.212v-1.352h-.875L5.42 7.465 8.03 12"/>
+                              </g>
+                           </g>
+                        </svg>
+                        <span class="metro-name">Марьина роща</span>
+                        <span class="metro-time">2 минуты пешком</span>
+                     </div>
+                     <div class="text-adress">Москва, ЮВАО, район Некрасовка, Люберецкие поля аэрации</div>
+                     <table class="table-box">
+                        <tbody>
+                           <tr class="table-row">
+                              <td class="table-cell-left">1-комнатные от 30 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">6 900 000 р.
+                              </td>
+                           </tr>
+                           <tr class="table-row">
+                              <td class="table-cell-left">2-комнатные от 75 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 22 900 000 р.
+                              </td>
+                           <tr class="table-row">
+                              <td class="table-cell-left">3-комнатные от 74 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 17 400 000 р.
+                              </td>
+                           <tr class="table-row">
+                              <td class="table-cell-left">4-комнатные от 177 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 63 200 000 р.
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Стадия готовности:
+                              </td>
+                              <td class="table-cell-right">Монтаж завершен. Ввод дома в эксплуатацию в 4 квартале 2019 года / На заселении.
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Ипотека:
+                              </td>
+                              <td class="table-cell-right">Есть
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Отделка:
+                              </td>
+                              <td class="table-cell-right">Возможна
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <div class="services">
+                        <ul class="services-list">
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M3.67 10.36h7.629v1.272H3.67z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M1.762 12.916V6.234l5.721-4.581 5.722 4.581v6.682zM7.482 0L.49 5.595v8.582h13.986V5.595z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Ипотека
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M1.771 4.842h13.645v8.844H1.77zM4.082 2.27v.3c0 .315.247.561.561.561.315 0 .56-.246.56-.56V2.27h6.866v.3c0 .315.246.561.56.561.315 0 .561-.246.561-.56V2.27h2.23v1.45H1.77V2.27zM1.211 14.783h14.755c.315 0 .56-.246.56-.56V1.71a.555.555 0 0 0-.56-.56H13.19V.67a.555.555 0 0 0-.56-.56.555.555 0 0 0-.561.56v.48H5.204V.67a.555.555 0 0 0-.56-.56.555.555 0 0 0-.562.56v.48H1.211a.555.555 0 0 0-.561.56v12.527c0 .3.26.547.56.547z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M12.63 7.41H4.56a.555.555 0 0 0-.56.56c0 .315.246.561.56.561h8.07c.314 0 .56-.246.56-.56a.555.555 0 0 0-.56-.561z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M8.595 10.12H4.56a.555.555 0 0 0-.561.56c0 .315.246.561.56.561h4.035c.314 0 .56-.246.56-.56a.555.555 0 0 0-.56-.561z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Рассрочка
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M14.382.193a.657.657 0 0 0-.929 0L.773 12.873a.657.657 0 1 0 .929.93l12.68-12.681a.657.657 0 0 0 0-.93z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M3.706 4.948c-.999 0-1.812-.813-1.812-1.812 0-.999.813-1.812 1.812-1.812 1 0 1.812.813 1.812 1.812 0 1-.813 1.812-1.812 1.812zM3.701.01C1.981.01.58 1.41.58 3.131s1.4 3.121 3.121 3.121 3.121-1.4 3.121-3.12c0-1.722-1.4-3.122-3.12-3.122z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M11.456 12.686c-.998 0-1.81-.812-1.81-1.81s.812-1.81 1.81-1.81 1.81.812 1.81 1.81-.812 1.81-1.81 1.81zm-.005-4.936c-1.72 0-3.121 1.4-3.121 3.121s1.4 3.121 3.121 3.121 3.121-1.4 3.121-3.12c0-1.722-1.4-3.122-3.12-3.122z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Скидки
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M9.62 16.875c-4.341 0-7.875-3.533-7.875-7.875 0-4.343 3.534-7.875 7.875-7.875S17.495 4.658 17.495 9c0 4.343-3.534 7.875-7.875 7.875zM9.62 0c-4.962 0-9 4.038-9 9s4.038 9 9 9 9-4.038 9-9-4.038-9-9-9z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M11.858 7.875H9.615v-2.25h2.243a1.124 1.124 0 0 1 0 2.25zm.007-3.375H9.052a.563.563 0 0 0-.562.563v5.062H6.802a.563.563 0 0 0 0 1.125H8.49v1.688a.563.563 0 0 0 1.125 0V11.25h1.688a.563.563 0 0 0 0-1.125H9.614V9h2.25c1.24 0 2.25-1.01 2.25-2.25s-1.01-2.25-2.25-2.25z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              субсидии
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="complex-img">
+                     <img src="img/Bitmap.jpg" alt="img">
+                     <a href="#" class="btn-more">Подробнее</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="area-result">
+            <div class="box">
+               <div class="category">
+                  <div class="complex-text">
+                     <a href="#" class="complex-title">ДОМ «Флагман»</a>
+                     <div class="complex-metro">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                           <g>
+                              <g>
+                                 <path fill="#8b00ff" d="M8.03 12l2.609-4.535 1.083 3.071h-.875v1.352h5.212v-1.352h-.995L11.321.69 8.029 6.752 4.74.689.994 10.536H0v1.352h5.212v-1.352h-.875L5.42 7.465 8.03 12"/>
+                              </g>
+                           </g>
+                        </svg>
+                        <span class="metro-name">Выхино</span>
+                        <span class="metro-time">10 минут на транспорте</span>
+                     </div>
+                     <div class="text-adress">Московская область, г. Долгопрудный, ул. Набережная</div>
+                     <table class="table-box">
+                        <tbody>
+                           <tr class="table-row">
+                              <td class="table-cell-left">1-комнатные от 30 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 3 239 397 р.
+                              </td>
+                           </tr>
+                           <tr class="table-row">
+                              <td class="table-cell-left">2-комнатные от 75 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 4 734 000 р.
+                              </td>
+                           <tr class="table-row">
+                              <td class="table-cell-left">3-комнатные от 74 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 6 512 440 р.
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Стадия готовности:
+                              </td>
+                              <td class="table-cell-right">Введен в эксплуатацию / На заселении.
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Ипотека:
+                              </td>
+                              <td class="table-cell-right">Есть
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Отделка:
+                              </td>
+                              <td class="table-cell-right">Возможна
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <div class="services">
+                        <ul class="services-list">
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M3.67 10.36h7.629v1.272H3.67z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M1.762 12.916V6.234l5.721-4.581 5.722 4.581v6.682zM7.482 0L.49 5.595v8.582h13.986V5.595z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Ипотека
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M1.771 4.842h13.645v8.844H1.77zM4.082 2.27v.3c0 .315.247.561.561.561.315 0 .56-.246.56-.56V2.27h6.866v.3c0 .315.246.561.56.561.315 0 .561-.246.561-.56V2.27h2.23v1.45H1.77V2.27zM1.211 14.783h14.755c.315 0 .56-.246.56-.56V1.71a.555.555 0 0 0-.56-.56H13.19V.67a.555.555 0 0 0-.56-.56.555.555 0 0 0-.561.56v.48H5.204V.67a.555.555 0 0 0-.56-.56.555.555 0 0 0-.562.56v.48H1.211a.555.555 0 0 0-.561.56v12.527c0 .3.26.547.56.547z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M12.63 7.41H4.56a.555.555 0 0 0-.56.56c0 .315.246.561.56.561h8.07c.314 0 .56-.246.56-.56a.555.555 0 0 0-.56-.561z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M8.595 10.12H4.56a.555.555 0 0 0-.561.56c0 .315.246.561.56.561h4.035c.314 0 .56-.246.56-.56a.555.555 0 0 0-.56-.561z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Рассрочка
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M14.382.193a.657.657 0 0 0-.929 0L.773 12.873a.657.657 0 1 0 .929.93l12.68-12.681a.657.657 0 0 0 0-.93z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M3.706 4.948c-.999 0-1.812-.813-1.812-1.812 0-.999.813-1.812 1.812-1.812 1 0 1.812.813 1.812 1.812 0 1-.813 1.812-1.812 1.812zM3.701.01C1.981.01.58 1.41.58 3.131s1.4 3.121 3.121 3.121 3.121-1.4 3.121-3.12c0-1.722-1.4-3.122-3.12-3.122z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M11.456 12.686c-.998 0-1.81-.812-1.81-1.81s.812-1.81 1.81-1.81 1.81.812 1.81 1.81-.812 1.81-1.81 1.81zm-.005-4.936c-1.72 0-3.121 1.4-3.121 3.121s1.4 3.121 3.121 3.121 3.121-1.4 3.121-3.12c0-1.722-1.4-3.122-3.12-3.122z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Скидки
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M9.62 16.875c-4.341 0-7.875-3.533-7.875-7.875 0-4.343 3.534-7.875 7.875-7.875S17.495 4.658 17.495 9c0 4.343-3.534 7.875-7.875 7.875zM9.62 0c-4.962 0-9 4.038-9 9s4.038 9 9 9 9-4.038 9-9-4.038-9-9-9z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M11.858 7.875H9.615v-2.25h2.243a1.124 1.124 0 0 1 0 2.25zm.007-3.375H9.052a.563.563 0 0 0-.562.563v5.062H6.802a.563.563 0 0 0 0 1.125H8.49v1.688a.563.563 0 0 0 1.125 0V11.25h1.688a.563.563 0 0 0 0-1.125H9.614V9h2.25c1.24 0 2.25-1.01 2.25-2.25s-1.01-2.25-2.25-2.25z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              субсидии
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="complex-img">
+                     <img src="img/Bitmap_2.jpg" alt="img">
+                     <a href="#" class="btn-more">Подробнее</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="area-result">
+            <div class="box">
+               <div class="category">
+                  <div class="complex-text">
+                     <a href="#" class="complex-title">ЖК «Лайково»</a>
+                     <div class="complex-metro">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                           <g>
+                              <g>
+                                 <path fill="#008000" d="M8.03 12l2.609-4.535 1.083 3.071h-.875v1.352h5.212v-1.352h-.995L11.321.69 8.029 6.752 4.74.689.994 10.536H0v1.352h5.212v-1.352h-.875L5.42 7.465 8.03 12"/>
+                              </g>
+                           </g>
+                        </svg>
+                        <span class="metro-name">Ховрино</span>
+                        <span class="metro-time">15 минут на транспорте</span>
+                     </div>
+                     <div class="text-adress">Московская область, г. Долгопрудный, ул. Дирижабельная</div>
+                     <table class="table-box">
+                        <tbody>
+                           <tr class="table-row">
+                              <td class="table-cell-left">1-комнатные от 30 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">6 900 000 р.
+                              </td>
+                           </tr>
+                           <tr class="table-row">
+                              <td class="table-cell-left">2-комнатные от 75 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 22 900 000 р.
+                              </td>
+                           <tr class="table-row">
+                              <td class="table-cell-left">3-комнатные от 74 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 17 400 000 р.
+                              </td>
+                           <tr class="table-row">
+                              <td class="table-cell-left">4-комнатные от 177 м<sup>2</sup>
+                              </td>
+                              <td class="table-cell-right">от 63 200 000 р.
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Стадия готовности:
+                              </td>
+                              <td class="table-cell-right">Монтаж завершен. Ввод дома в эксплуатацию в 4 квартале 2019 года / На заселении.
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Ипотека:
+                              </td>
+                              <td class="table-cell-right">Есть
+                              </td>
+                           <tr class="table-row__emply">
+                              <td class="table-cell-left">Отделка:
+                              </td>
+                              <td class="table-cell-right">Возможна
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <div class="services">
+                        <ul class="services-list">
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M3.67 10.36h7.629v1.272H3.67z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M1.762 12.916V6.234l5.721-4.581 5.722 4.581v6.682zM7.482 0L.49 5.595v8.582h13.986V5.595z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Ипотека
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M1.771 4.842h13.645v8.844H1.77zM4.082 2.27v.3c0 .315.247.561.561.561.315 0 .56-.246.56-.56V2.27h6.866v.3c0 .315.246.561.56.561.315 0 .561-.246.561-.56V2.27h2.23v1.45H1.77V2.27zM1.211 14.783h14.755c.315 0 .56-.246.56-.56V1.71a.555.555 0 0 0-.56-.56H13.19V.67a.555.555 0 0 0-.56-.56.555.555 0 0 0-.561.56v.48H5.204V.67a.555.555 0 0 0-.56-.56.555.555 0 0 0-.562.56v.48H1.211a.555.555 0 0 0-.561.56v12.527c0 .3.26.547.56.547z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M12.63 7.41H4.56a.555.555 0 0 0-.56.56c0 .315.246.561.56.561h8.07c.314 0 .56-.246.56-.56a.555.555 0 0 0-.56-.561z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M8.595 10.12H4.56a.555.555 0 0 0-.561.56c0 .315.246.561.56.561h4.035c.314 0 .56-.246.56-.56a.555.555 0 0 0-.56-.561z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Рассрочка
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M14.382.193a.657.657 0 0 0-.929 0L.773 12.873a.657.657 0 1 0 .929.93l12.68-12.681a.657.657 0 0 0 0-.93z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M3.706 4.948c-.999 0-1.812-.813-1.812-1.812 0-.999.813-1.812 1.812-1.812 1 0 1.812.813 1.812 1.812 0 1-.813 1.812-1.812 1.812zM3.701.01C1.981.01.58 1.41.58 3.131s1.4 3.121 3.121 3.121 3.121-1.4 3.121-3.12c0-1.722-1.4-3.122-3.12-3.122z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M11.456 12.686c-.998 0-1.81-.812-1.81-1.81s.812-1.81 1.81-1.81 1.81.812 1.81 1.81-.812 1.81-1.81 1.81zm-.005-4.936c-1.72 0-3.121 1.4-3.121 3.121s1.4 3.121 3.121 3.121 3.121-1.4 3.121-3.12c0-1.722-1.4-3.122-3.12-3.122z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              Скидки
+                           </li>
+                           <li class="service__items">
+                              <span class="icons">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+                                    <g>
+                                       <g>
+                                          <path fill="#079fc2" d="M9.62 16.875c-4.341 0-7.875-3.533-7.875-7.875 0-4.343 3.534-7.875 7.875-7.875S17.495 4.658 17.495 9c0 4.343-3.534 7.875-7.875 7.875zM9.62 0c-4.962 0-9 4.038-9 9s4.038 9 9 9 9-4.038 9-9-4.038-9-9-9z"/>
+                                       </g>
+                                       <g>
+                                          <path fill="#079fc2" d="M11.858 7.875H9.615v-2.25h2.243a1.124 1.124 0 0 1 0 2.25zm.007-3.375H9.052a.563.563 0 0 0-.562.563v5.062H6.802a.563.563 0 0 0 0 1.125H8.49v1.688a.563.563 0 0 0 1.125 0V11.25h1.688a.563.563 0 0 0 0-1.125H9.614V9h2.25c1.24 0 2.25-1.01 2.25-2.25s-1.01-2.25-2.25-2.25z"/>
+                                       </g>
+                                    </g>
+                                 </svg>
+                              </span>
+                              субсидии
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="complex-img">
+                     <img src="img/Bitmap.jpg" alt="img">
+                     <a href="#" class="btn-more">Подробнее</a>
+                  </div>
+               </div>
+            </div>
+            <div class="btn_offers">
+               <a href="#" class="btn__next">Все предложения</a>
+            </div>
+         </section>
+         <div class="container__of">
+            <div class="belyevo">
+               <div class="miel">
+                  Офис Миэль «В Беляево»
+               </div>
+               <p class="belyevo-text">— это команда профессиональных экспертов и агентов по недвижимости с большим багажом риелторской и юридической практики. Основные направления Миэль «В Беляево» – это продажа элитной недвижимости и квартир в новостройках.</p>
+               <div class="ofis__title">Наши специалисты выполняют широкий спектр операций, связанных с недвижимостью:</div>
+               <ul class="function">
+                  <li class="function-item">
+                     <span class="icons"><img src="img/icons/icons_1.png" alt="icon"></span>
+                     <span class="funcrion-text">Подбор<br> квартир</span>
+                  </li>
+                  <li class="function-item">
+                     <span class="icons"><img src="img/icons/icons_2.png" alt="icon"></span>
+                     <span class="funcrion-text">Проверка<br> застройщика<br> 
+                     и/или собственника</span>
+                  </li>
+                  <li class="function-item">
+                     <span class="icons"><img src="img/icons/icons_3.png" alt="icon"></span>
+                     <span class="funcrion-text">Проверка и<br> оформление<br> 
+                     документов</span>
+                  </li>
+                  <li class="function-item">
+                     <span class="icons"><img src="img/icons/icons_4.png" alt="icon"></span>
+                     <span class="funcrion-text">Юридическая<br> 
+                     поддержка</span>
+                  </li>
+                  <li class="function-item">
+                     <span class="icons"><img src="img/icons/icons_5.png" alt="icon"></span>
+                     <span class="funcrion-text">Сопровождение<br> 
+                     сделки</span>
+                  </li>
+               </ul>
+               <p class="description">
+                  Если вы хотите купить квартиру в элитном жилом комплексе, то мы поможем вам это сделать не только максимально комфортно и безопасно, но и выгодно – мы всегда сообщаем о самых интересных акциях и выбираем действительно горячие предложения. Кроме того, мы готовы помочь оформить выгодную ипотеку. Каждый клиент становится для нас партнером, которого мы готовы защитить от всевозможных рисков и поддержать на всех этапах проведения сделки.
+               </p>
+            </div>
+         </div>
+         <footer class="footer">
+            <div class="footer-box">
+               <div class="footer-block">
+                  <div class="footer-belyevo">© 2009–2016 Офис «В Беляево». При использовании материалов ссылка на сайт обязательна</div>
+                  <div class="footer-blocks">
+                     <a href="#" class="footer-link" target="blank">
+                        <span class="icon-svg">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20">
+                              <g>
+                                 <g>
+                                    <path fill="#079fc2" d="M7.103 0c3.921-.007 7.118 3.18 7.125 7.101a7.026 7.026 0 0 1-.385 2.321 7.154 7.154 0 0 1-2.07 3.065 4.98 4.98 0 0 0-1.958 3.279l-.002.035a.246.246 0 0 1-.16.173v.002h-.002a9.1 9.1 0 0 1-2.522.354 9.252 9.252 0 0 1-2.52-.347l-.017-.004-.009-.002a.238.238 0 0 1-.154-.2h-.002a4.976 4.976 0 0 0-1.766-3.123A7.14 7.14 0 0 1 .394 9.446 7.113 7.113 0 0 1 0 7.124C-.004 3.202 3.181.007 7.103 0m2.99 11.11a4.965 4.965 0 0 0 2.001-4.001 4.985 4.985 0 0 0-4.987-4.976 4.988 4.988 0 0 0-4.974 4.992 4.986 4.986 0 0 0 1.821 3.84v.002a7.19 7.19 0 0 1 2.268 3.213 6.95 6.95 0 0 0 1.797-.001 7.111 7.111 0 0 1 2.074-3.07"/>
+                                 </g>
+                                 <g>
+                                    <path fill="#079fc2" d="M9.54 6.3a.853.853 0 0 1 .856.837v.066a3.29 3.29 0 0 1-3.278 3.191A3.288 3.288 0 0 1 3.83 7.167a.853.853 0 0 1 1.706-.021v.017a1.577 1.577 0 1 0 3.151.026v-.002c.002-.025.002-.053.002-.078V7.09c.035-.441.4-.79.851-.79m.15 10.464c.046 0 .083.037.085.081v.004c0 .002 0 .004-.002.007a2.655 2.655 0 0 1-3.684 2.34 2.656 2.656 0 0 1-1.616-2.325v-.001c-.002-.01-.002-.02-.002-.03a.087.087 0 0 1 .085-.074l.016.002c.005 0 .01.003.011.003a9.77 9.77 0 0 0 2.553.325 10.101 10.101 0 0 0 2.531-.328l.006-.002c.004-.002.011-.002.018-.002"/>
+                                 </g>
+                              </g>
+                           </svg>
+                        </span>
+                        Разработка и продвижение — «ЭВРИКА»
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
